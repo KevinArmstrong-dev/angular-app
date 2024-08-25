@@ -2,9 +2,9 @@
     <button (click)="onSelectedUser()">
         <!-- property binding for the image -->
         <img 
-        [src]="imagePath()"  
-        [alt]="selectedUser().name"
+        [src]="imagePath"  
+        [alt]="name"
         />
-        <span>{{selectedUser().name}}</span>
+        <span>{{name}}</span>
     </button>
 </div>
