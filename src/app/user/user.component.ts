@@ -13,9 +13,11 @@ import { DUMMY_USERS } from "../dummy-users";
 
 export class UserComponent{
      //all the properties here are available in the template
-    @Input({required:true})avatar!: string;
-    @Input({required:true})name!:string;
+     @Input({required:true})avatar!: string;
+     @Input({required:true})name!:string;
 
+     //it is possible to use signals for the input by using the input from the core
+     //ex: avatar = input.required<string>()
     get imagePath(){
         return 'assets/users/' + this.avatar;
     }
