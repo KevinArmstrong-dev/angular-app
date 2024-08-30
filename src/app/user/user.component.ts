@@ -17,12 +17,13 @@ export class UserComponent{
     @Input({required:true})avatar!: string; //this is a decorator
     @Input({required:true})name!:string;
     @Output()selectedTask = new EventEmitter()
+    
      //it is possible to use signals for the input by using the input from the core
      //ex: avatar = input.required<string>()
     get imagePath(){
         return 'assets/users/' + this.avatar;
     }
-    
+
     onSelectedUser(){
         this.selectedTask.emit(this.userId);
     }
