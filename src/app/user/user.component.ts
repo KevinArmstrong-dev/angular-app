@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, EventEmitter, Input, Output ,output} from "@angular/core";
 import { DUMMY_USERS } from "../dummy-users";
 
 
@@ -16,8 +16,8 @@ export class UserComponent{
     @Input({required:true})userId!:string;
     @Input({required:true})avatar!: string; //this is a decorator
     @Input({required:true})name!:string;
-    @Output()selectedTask = new EventEmitter() //this serves as publisher
-    
+    @Output()selectedTask = new EventEmitter<string>() //this serves as publisher
+
      //it is possible to use signals for the input by using the input from the core
      //ex: avatar = input.required<string>()
     get imagePath(){
